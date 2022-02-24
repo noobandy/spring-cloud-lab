@@ -1,6 +1,7 @@
 package click.techlabs.pingpong.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import click.techlabs.pingpong.dto.PingPongDTO;
@@ -9,6 +10,7 @@ import click.techlabs.pingpong.dto.PingPongDTO;
 public class PingPongService {
 
 	@Autowired
+	@Qualifier("feignClientExtSerice")
 	private ExtService extService;
 
 
