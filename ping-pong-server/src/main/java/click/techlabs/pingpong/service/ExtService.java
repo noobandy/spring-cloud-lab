@@ -33,8 +33,8 @@ public class ExtService {
 		InstanceInfo instanceInfo = eurekaClient.getApplication("ping-service").getInstances().get(0);
 		URI uri = null;
 		try {
-			System.out.println(instanceInfo.getHomePageUrl().concat("ping-service/").concat("ping"));
-			 uri = new URI(instanceInfo.getHomePageUrl().concat("ping-service/").concat("ping"));
+			System.out.println(instanceInfo.getHomePageUrl().concat("ping"));
+			 uri = new URI(instanceInfo.getHomePageUrl().concat("ping"));
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,7 +52,7 @@ public class ExtService {
 		InstanceInfo instanceInfo = eurekaClient.getApplication("pong-service").getInstances().get(0);
 		URI uri = null;
 		try {
-			 uri = new URI(instanceInfo.getHomePageUrl().concat("pong-service/").concat("pong"));
+			 uri = new URI(instanceInfo.getHomePageUrl().concat("pong"));
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
